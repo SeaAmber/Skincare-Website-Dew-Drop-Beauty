@@ -3,19 +3,6 @@ import { useQuery } from '@tanstack/react-query'
 import { productsService } from "../services/ProductService";
 
 
-// const fetchCategories = async () => {
-// try{
-//     const {data} = await  axios.get(
-//      'https://dummyjson.com/products/category-list'
-// );
-//    return data;
-// }catch(error) {
-//     console.log(error);
-// }
-// };
-
-
-
 export default function Filters({filters, onFilter}) {
    const {data, error, isLoading} = useQuery({
   queryKey: [ 'categories' ],
