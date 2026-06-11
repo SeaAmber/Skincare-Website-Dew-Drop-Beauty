@@ -1,3 +1,4 @@
+import { Route, Routes } from 'react-router';
 import './App.css'
 import Footer from './components/Footer'
 import Header from './components/Header'
@@ -11,11 +12,14 @@ const queryClient = new QueryClient
 
   return (
  <div className='flex flex-col min-h-screen'>
-  <Header/>
+  <Header />
 
 
  <QueryClientProvider client={queryClient}>
- <Products/>
+  <Routes>
+    <Route path='/' element={<Products />} />
+
+  </Routes>
  </QueryClientProvider>
 
   <Footer/>
