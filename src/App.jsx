@@ -1,4 +1,5 @@
 import { Outlet, Route, Routes } from 'react-router';
+import { Route, Routes } from 'react-router';
 import './App.css'
 import Footer from './components/Footer'
 import Header from './components/Header'
