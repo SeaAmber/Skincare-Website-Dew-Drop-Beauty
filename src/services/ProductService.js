@@ -32,6 +32,9 @@ class ProductsService extends HttpService {
      return this.get('products/categories')  
     }
     
+    async getProduct(id) {
+     return this.get(`/products/${id}`);
+    }
 }
 
 export const productsService = new ProductsService(httpClient);
