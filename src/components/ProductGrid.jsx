@@ -53,8 +53,6 @@ products: PropTypes.arrayOf(
         title:PropTypes.string.isRequired,
         price:PropTypes.number.isRequired,
         image:PropTypes.string.isRequired,
-
-
     })
 ).isRequired,
 loading: PropTypes.bool

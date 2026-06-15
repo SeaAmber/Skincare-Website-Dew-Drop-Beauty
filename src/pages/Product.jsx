@@ -22,7 +22,7 @@ const NotificationWrapper = styled.div `
 animation: ${fadeIn} 0.5s ease-out;
 position: absolute;
 top: 1rem;
-right: 1rem;
+right: 6rem;
 background-color: #10b981;
 color: white;
 padding: 0.5rem 1rem;

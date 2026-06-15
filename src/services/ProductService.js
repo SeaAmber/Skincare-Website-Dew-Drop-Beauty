@@ -35,6 +35,10 @@ class ProductsService extends HttpService {
     async getProduct(id) {
      return this.get(`/products/${id}`);
     }
+
+    async createOrder(orderData) {
+      return this.post('/posts', orderData);
+    }
 }
 
 export const productsService = new ProductsService(httpClient);
