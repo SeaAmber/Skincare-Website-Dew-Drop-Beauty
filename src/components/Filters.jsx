@@ -7,7 +7,7 @@ const SkeletonFilters = () => {
   const skeletons = Array.from({ length: 25 });
 
   return (
-    <aside className="w-1/4 p-4 bg-white pb-4 animate-pulse">
+    <aside className="w-1/4  p-4 bg-white pb-4 animate-pulse">
       {/* Sort Title */}
       <div className="h-6 w-32 bg-gray-200 rounded mb-4"></div>
 
@@ -41,15 +41,14 @@ export default function Filters({filters, onFilter}) {
 
 
     return (
-    <aside className='w-1/4 p-4 bg-white pb-4'>
+    <aside className='w-2/4 p-4 bg-white pb-4'>
         <div className='mb-4'>
             <h3 className='text-lg font-semibold mb-4'>Sort By</h3>
               <select 
              onChange={(e) => onFilter((prev) => ({...prev, sort:e.target.value}))}
-           className="w-full p-2 border rounded-md"
+           className="w-full border rounded-md"
             > 
 
-            className='w-full p-2 border rounded-md'
             
                 <option value='asc'>Ascending</option>
                 <option value='desc'>Descending</option>
@@ -58,18 +57,13 @@ export default function Filters({filters, onFilter}) {
 
 
      <div className='mb-4'>
-        <h3 className='text-2xl font-semibold mb-4'>Categories</h3>
+        <h3 className='font-semibold mb-4'>Categories</h3>
         <div className='flex flex-wrap gap-2'>
              <button 
             onClick={() => 
        onFilter((prev) => ({...prev, categories: ''}))}
-//      onClick={() => {
-    
-//     onFilter({ categories: "" });
-//     console.log("UI: All Products clicked");
-//     console.log("Sending categories:", "");
-//   }}
-            className={`px-3 py-1 rounded-full capitalize ${
+
+            className={`px-2 py-2 rounded-lg capitalize ${
               filters.categories === '' 
               ? 'bg-blue-500 text-white'
               : 'bg-orange-200 hover:bg-orange-400'
@@ -89,7 +83,7 @@ export default function Filters({filters, onFilter}) {
             <button key={category.slug} 
             // onClick={() => onFilter((prev) => ({...prev, filters}))}
             onClick={() => onFilter(prev => ({ ...prev, categories: category.slug }))}
-              className={`px-3 py-1 rounded-full capitalize ${
+              className={`px-2 py-2  rounded-lg capitalize ${
              filters.categories === category.slug
               ? 'bg-blue-500 text-white'
              : 'bg-orange-200 hover:bg-orange-400'

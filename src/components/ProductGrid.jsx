@@ -6,7 +6,7 @@ const SkeletonProductGrid = () => {
   const skeletons = Array.from({ length: 30 });
 
   return (
-    <div className=" w-3/4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-4 animate-pulse">
+    <div className=" w-2/4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-4 animate-pulse">
       {skeletons.map((_, index) => (
         <div key={index} to={`/products/${index.id}`} className="bg-white rounded-xl shadow-md p-4 flex flex-col gap-3 hover:shadow-lg transition-shadow">
           <div className="w-full h-40 bg-gray-200 rounded-lg"></div>

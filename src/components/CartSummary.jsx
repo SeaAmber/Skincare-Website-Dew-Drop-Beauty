@@ -19,14 +19,14 @@ return (
               
     <span>{shopItem.title}(x{shopItem.quantity})</span>
     </div>
-    <span>${shopItem.price}</span>
+    <span>${(shopItem.price * shopItem.quantity).toFixed(2)}</span>
     </div>
 ))}
 
 <div className="border-t pt-2">
 <div className="flex justify-between font-semibold">
     <span>Total: </span>
-     <span>${cartTotal}</span>
+     <span>${cartTotal.toFixed(2)}</span>
 </div>
 </div>
 </div>

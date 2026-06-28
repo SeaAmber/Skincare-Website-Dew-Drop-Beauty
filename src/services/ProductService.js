@@ -37,7 +37,7 @@ class ProductsService extends HttpService {
     }
 
     async createOrder(orderData) {
-      return this.post('/posts', orderData);
+        return super.createOrder(orderData);
     }
 }
 

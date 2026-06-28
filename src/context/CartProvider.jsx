@@ -55,9 +55,14 @@ for (const shopItem of shopItems) {
 cartTotal += shopItem.price * shopItem.quantity
 }
 
+const clearCart = () => {
+    setShopItems([])
+}
+
+
 
 return  (
-<CartContext.Provider value = {{shopItems, addItem, removeItems,updateQty,cartCount,cartTotal}}>{children}</CartContext.Provider>
+<CartContext.Provider value = {{shopItems, addItem, removeItems,updateQty,clearCart,cartCount,cartTotal}}>{children}</CartContext.Provider>
 )
 };
 
