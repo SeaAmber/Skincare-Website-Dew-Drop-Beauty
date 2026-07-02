@@ -4,7 +4,6 @@ import { Link } from "react-router";
 
 const SkeletonProductGrid = () => {
   const skeletons = Array.from({ length: 30 });
-
   return (
     <div className=" w-2/4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-4 animate-pulse">
       {skeletons.map((_, index) => (
@@ -25,10 +24,13 @@ const SkeletonProductGrid = () => {
 
 
 export default function ProductGrid({ products, loading }) {
- if(loading) return <SkeletonProductGrid />;
+  if(loading) return <SkeletonProductGrid />;
 
-   return <div className='w-3/4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4'>
-    {products.map((product) => (
+   return 
+  //  <div className='w-3/4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4'>
+    <div className="w-full md:w-3/4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+
+  {products.map((product) => (
 
          <Link key={product.id} to={`/products/${product.id}`} className='p-4 bg-white rounded shadow'>
             <div className="p-4 bg-white rounded shadow hover:shadow-xl transition-shadow duration-300">

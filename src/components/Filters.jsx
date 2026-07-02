@@ -31,8 +31,6 @@ const SkeletonFilters = () => {
 };
 
 
-
-
 export default function Filters({filters, onFilter}) {
     const {data, error, isLoading} = useCategories()
 
@@ -41,7 +39,9 @@ export default function Filters({filters, onFilter}) {
 
 
     return (
-    <aside className='w-2/4 p-4 bg-white pb-4'>
+    // <aside className='w-2/4 p-4 bg-white pb-4'>
+    <aside className="w-full md:w-1/4 p-4 bg-white pb-4">
+
         <div className='mb-4'>
             <h3 className='text-lg font-semibold mb-4'>Sort By</h3>
               <select 
