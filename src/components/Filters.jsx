@@ -81,7 +81,6 @@ export default function Filters({filters, onFilter}) {
 
          {data?.map(category => (
             <button key={category.slug} 
-            // onClick={() => onFilter((prev) => ({...prev, filters}))}
             onClick={() => onFilter(prev => ({ ...prev, categories: category.slug }))}
               className={`px-2 py-2  rounded-lg capitalize ${
              filters.categories === category.slug

@@ -26,9 +26,9 @@ const SkeletonProductGrid = () => {
 export default function ProductGrid({ products, loading }) {
   if(loading) return <SkeletonProductGrid />;
 
-   return 
+   return (
   //  <div className='w-3/4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4'>
-    <div className="w-full md:w-3/4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+    <div className="md:w-3/4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
 
   {products.map((product) => (
 
@@ -43,6 +43,7 @@ export default function ProductGrid({ products, loading }) {
        </Link>
   ))}
    </div>
+   )
   }
     
     
