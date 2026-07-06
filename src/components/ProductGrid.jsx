@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 
 
 const SkeletonProductGrid = () => {
@@ -27,13 +27,12 @@ export default function ProductGrid({ products, loading }) {
   if(loading) return <SkeletonProductGrid />;
 
    return (
-  //  <div className='w-3/4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4'>
     <div className="md:w-3/4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
 
   {products.map((product) => (
 
          <Link key={product.id} to={`/products/${product.id}`} className='p-4 bg-white rounded shadow'>
-            <div className="p-4 bg-white rounded shadow hover:shadow-xl transition-shadow duration-300">
+            <div className="flex flex-col mx-15 p-9 bg-white rounded shadow hover:shadow-xl transition-shadow duration-300 md:mx-auto">
         <img src={product.images[0]} alt={product.title}
         className='h-40 mx-auto mb-4 object-contain'
          />

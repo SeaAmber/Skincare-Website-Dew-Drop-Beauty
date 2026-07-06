@@ -3,9 +3,13 @@ import checkoutIcon from '../assets/checkout.png'
 import { CartContext } from "../context/CartContext";
 import { use } from "react";
 
+
 export default function Navbar () {
-  const {cartCount} = use(CartContext)
-     return (
+  const {cartCount} = use(CartContext);
+    
+ 
+  
+  return (
     <header className='bg-blue-200 text-black p-4 flex justify-between items-center'>
       <NavLink to='/' className='hover: opacity-80 transition-opacity'>
       <h1 className='text-2xl font-bold'>DewDrop Beauty</h1>

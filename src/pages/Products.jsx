@@ -15,8 +15,8 @@ export default function Products() {
     if(error) return <div>Error when fetching the products</div>;
 
     return (
-        <main className='grow flex bg-gray-100'>
-    <Filters filters={filters} onFilter={setFilters} />
+        <main className='flex flex-col bg-gray-100 md:flex-row'>
+         <Filters filters={filters} onFilter={setFilters} />
         <ProductGrid products={data?.products ?? []} loading={isLoading}/>
        </main>
     );

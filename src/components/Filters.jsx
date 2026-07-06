@@ -39,14 +39,12 @@ export default function Filters({filters, onFilter}) {
 
 
     return (
-    // <aside className='w-2/4 p-4 bg-white pb-4'>
-    <aside className="w-full md:w-1/4 p-4 bg-white pb-4">
-
-        <div className='mb-4'>
-            <h3 className='text-lg font-semibold mb-4'>Sort By</h3>
+    <aside className="md:w-1/4 p-4 bg-white pb-4 md:block">
+         <div className='p-4 text-2xl'> 
+            <h3 className='font-semibold mb-4 md:block'>Sort By</h3>
               <select 
              onChange={(e) => onFilter((prev) => ({...prev, sort:e.target.value}))}
-           className="w-full border rounded-md"
+           className="border rounded-md md:w-full" 
             > 
 
             
@@ -55,9 +53,8 @@ export default function Filters({filters, onFilter}) {
             </select>  
         </div>
 
-
      <div className='mb-4'>
-        <h3 className='font-semibold mb-4'>Categories</h3>
+        <h3 className='text-2xl mb-5 font-semibold'>Categories</h3>
         <div className='flex flex-wrap gap-2'>
              <button 
             onClick={() => 
@@ -95,6 +92,7 @@ export default function Filters({filters, onFilter}) {
          </div>
     </div>
 </aside>
+
     );
 }
 
